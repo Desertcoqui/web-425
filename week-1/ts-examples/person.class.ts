@@ -5,7 +5,7 @@
 // Description: Angular CLI
 // Code Attribution: Code provided by Professor's walk through videos
 
-import { IPerson } from './person.interface';
+import { IPerson } from "./person.interface";
 
 class Person implements IPerson {
   firstName: string;
@@ -17,5 +17,5 @@ class Person implements IPerson {
   }
 }
 
-let myName = new Person('Detres', 'Papo');
+let myName = new Person("Detres", "Papo");
 console.log(`My name is ${myName.firstName} ${myName.lastName}`);
