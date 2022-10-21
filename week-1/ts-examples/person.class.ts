@@ -17,5 +17,5 @@ class Person implements IPerson {
   }
 }
 
-let myName = new Person("Detres", "Papo");
+let myName = new Person("Detres", "Papo$");
 console.log(`My name is ${myName.firstName} ${myName.lastName}`);
