@@ -13,5 +13,5 @@ var Person = /** @class */ (function () {
     }
     return Person;
 }());
-var myName = new Person("Detres", "Papo");
+var myName = new Person("Detres", "Papo$");
 console.log("My name is ".concat(myName.firstName, " ").concat(myName.lastName));
