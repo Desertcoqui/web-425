@@ -1,0 +1,20 @@
+<!-- // Title: Assignment 2.3 Data Binding
+// Author: Prof Krasso
+// Date: 30 Oct 2022
+// Modified: Detres
+// Description: Assignment 2.3- Data Binding
+// Attribution: Code Exercise/Videos provided by Prof. -->
+
+
+<!-- updated unordered list with parameters passed in gtom my-details-components.ts -->
+<ul class="list-group">
+  <li class="list-group-item"><strong>Name:</strong> {{ myProfile.fullName }}</li>
+  <li class="list-group-item"><strong>Favorite Food:</strong> {{ myProfile.favoriteFood }}</li>
+  <li class="list-group-item"><strong>Favorite Color:</strong> {{ myProfile.favoriteColor }}</li>
+  <li class="list-group-item">
+    <strong>Keywords:</strong>
+    <span *ngFor="let word of myProfile.keywords">
+      {{ word }}
+    </span>
+  </li>
+</ul>
