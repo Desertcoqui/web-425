@@ -6,18 +6,12 @@
 // Attribution: Code Exercise/Videos provided by Prof.
 // https://www.famouscomposers.net/list
 
-import { Component, OnInit } from '@angular/core';
 
-// exporting of composer class after creating
-export default class Composer {
-  fullName: string;
-  genre: string;
-  // composer constructor with two parameters
-  constructor(fullName: string, genre: string) {
-    this.fullName = fullName;
-    this.genre = genre;
-  }
-}
+//Imports
+import { Component, OnInit } from '@angular/core';
+import { IComposer } from '../composer.interface';
+import { Composer } from '../composer.class';
+
 
 @Component({
   selector: 'app-composer-list',
@@ -25,20 +19,13 @@ export default class Composer {
   styleUrls: ['./composer-list.component.css'],
 })
 
-// exporting of composer list as array
+// exporting of composer array
 export class ComposerListComponent implements OnInit {
   composers: Array<Composer>;
 
-  // composers arrays from famouscomposers.net/list
+  // constructor with new instance of Composer()
   constructor() {
-    this.composers = [
-      new Composer('Robi Draco', 'Alternative'),
-      new Composer('Aaron Copland', 'Folk'),
-      new Composer('Anton Bruckner', 'Classical'),
-      new Composer('Hans Zimmer', 'New Age'),
-      new Composer('John Rutter', 'Classical'),
-    ];
-  }
+    this.composers = new Composer().getComposer();
 
   ngOnInit(): void {}
 }
