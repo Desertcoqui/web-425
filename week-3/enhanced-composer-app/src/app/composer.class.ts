@@ -27,17 +27,17 @@ export class Composer {
         genre: 'Grunge',
       },
       {
-        composerId: 1001,
+        composerId: 1002,
         fullName: 'Aaron Copland',
         genre: 'Folk',
       },
       {
-        composerId: 1002,
+        composerId: 1003,
         fullName: 'Anton Bruckner',
         genre: 'Classical',
       },
       {
-        composerId: 1003,
+        composerId: 1004,
         fullName: 'Hans Zimmer',
         genre: 'New Age',
       },

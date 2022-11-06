@@ -24,8 +24,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./composer-details.component.css'],
 })
 export class ComposerDetailsComponent implements OnInit {
+  //variable declarations
   composerId: number;
-  composer: IComposer;
+  composer!: IComposer;
 
   constructor(private route: ActivatedRoute) {
     this.composerId = parseInt(

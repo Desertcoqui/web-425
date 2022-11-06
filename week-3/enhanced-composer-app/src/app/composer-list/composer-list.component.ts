@@ -1,31 +1,30 @@
-// Title: Assignment 2.4 Composer
+// Title: Assignment 3.2 Passing Data to routes, Part 1
 // Author: Prof Krasso
-// Date: 30 Oct 2022
+// Date: Nov 6 2022
 // Modified: Detres
-// Description: Assignment 2.4 Composer
-// Attribution: Code Exercise/Videos provided by Prof.
-// https://www.famouscomposers.net/list
-
+// Description: Assignment 3.2 Passing Data to routes, Part 1
+//Week-3 exercises/videos
+//https://www.npmjs.com/package/bootstrap-icons
+//https://angular.io/api/router/RouterLink
+//https://angular.io/tutorial/toh-pt5
+//https://stackoverflow.com/questions/41370760/difference-between-routerlink-and-routerlink
 
 //Imports
-import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
+import { Component, OnInit } from '@angular/core';
 import { Composer } from '../composer.class';
-
 
 @Component({
   selector: 'app-composer-list',
   templateUrl: './composer-list.component.html',
   styleUrls: ['./composer-list.component.css'],
 })
-
-// exporting of composer array
 export class ComposerListComponent implements OnInit {
-  composers: Array<Composer>;
-
-  // constructor with new instance of Composer()
+  /* Defines Variables and initializes array */
+  composers: Array<IComposer>;
   constructor() {
-    this.composers = new Composer().getComposer();
+    this.composers = new Composer().getComposers();
+  }
 
   ngOnInit(): void {}
 }
