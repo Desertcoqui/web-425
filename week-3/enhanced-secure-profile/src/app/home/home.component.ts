@@ -1,8 +1,8 @@
-// Title: Assignment 3.3 - Passiing Data to Routes, Part 2
+// Title: Assignment 3.4 - Guarding Routes
 // Author: Prof Krasso
 // Date: Nov 6 2022
 // Modified: Detres
-// Description: Assignment 3.2 Passing Data to routes, Part 1
+// Description: Assignment 3.4 Guarding Routes
 //Week-3 exercises/videos
 //https://www.npmjs.com/package/bootstrap-icons
 //https://angular.io/api/router/RouterLink
@@ -15,7 +15,7 @@
 //https://cyberactive.bellevue.edu/ultra/courses/_513884_1/cl/outline
 //https://www.youtube.com/watch?v=T7ef0bOOWs4
 //https://www.youtube.com/watch?time_continue=2&v=vvXSW_Cldvg&feature=emb_logo
-//https://www.youtube.com/watch?time_continue=4&v=KTVHu4hafUs&feature=emb_logo -->
+//https://www.youtube.com/watch?time_continue=4&v=KTVHu4hafUs&feature=emb_logo
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -26,14 +26,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  isLoggedIn: Boolean = true;
+  // isLoggedIn: Boolean = true;
 
-  constructor(private route: ActivatedRoute) {
-    //isLoggedIn var passed from sign-in
-    this.isLoggedIn = Boolean(
-      this.route.snapshot.queryParamMap.get('isloggedIn')
-    );
-  }
+  // constructor(private route: ActivatedRoute) {
+  //   //isLoggedIn var passed from sign-in
+  //   this.isLoggedIn = Boolean(
+  //     this.route.snapshot.queryParamMap.get('isloggedIn')
+  //   );
+  // }
+  constructor() {}
 
   ngOnInit(): void {}
 }

@@ -1,8 +1,8 @@
-// Title: Assignment 3.3 - Passiing Data to Routes, Part 2
+// Title: Assignment 3.4 - Guarding Routes
 // Author: Prof Krasso
 // Date: Nov 6 2022
 // Modified: Detres
-// Description: Assignment 3.2 Passing Data to routes, Part 1
+// Description: Assignment 3.4 Guarding Routes
 //Week-3 exercises/videos
 //https://www.npmjs.com/package/bootstrap-icons
 //https://angular.io/api/router/RouterLink
@@ -20,6 +20,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInGuard } from './sign-in.guard';
 
 export const AppRoutes: Routes = [
   {
@@ -29,5 +30,7 @@ export const AppRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    //added canActivate with passed in Sign Guard import
+    canActivate: [SignInGuard],
   },
 ];
