@@ -12,15 +12,8 @@
 //https://stackoverflow.com/questions/56271351/how-to-get-id-from-the-url-using-snapshot-or-activatedroute-subscriber-in-angula
 //https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get
 
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-})
-
-// Title for the assignment goes here
-export class AppComponent {
-  assignment = 'Exercise 3.2 - Passing Data to Routes, Part 1';
+export interface IComposer {
+  composerId: number;
+  fullName: string;
+  genre: string;
 }
