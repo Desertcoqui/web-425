@@ -36,7 +36,7 @@
 
 <div class="container">
   <!--Assignments heading -->
-  <h2>Assignment 3.3 - Guarding Routes</h2>
+  <h2>Assignment 3.3 - Passing Data to Routes, Parte Dos</h2>
   <br />
   <div class="row">
     <div class="col-sm-4">
@@ -48,5 +48,15 @@
       <app-my-details></app-my-details>
     </div>
   </div>
+  <!-- Dynamically show the content value of isLoggedIn -->
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not authorized to view this content.
+        </h4>
+      </div>
+    </div>
+  </ng-template>
 
 </div>

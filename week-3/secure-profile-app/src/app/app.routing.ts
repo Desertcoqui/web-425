@@ -17,16 +17,17 @@
 //https://www.youtube.com/watch?time_continue=2&v=vvXSW_Cldvg&feature=emb_logo
 //https://www.youtube.com/watch?time_continue=4&v=KTVHu4hafUs&feature=emb_logo
 
-import { Component } from '@angular/core';
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-})
-
-// exporting login method and changing title variable to assignment variable
-export class AppComponent {
-  isLoggedIn: Boolean = true;
-  assignment: string = 'Secure Profile App';
-}
+export const AppRoutes: Routes = [
+  {
+    path: '',
+    component: SignInComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+];

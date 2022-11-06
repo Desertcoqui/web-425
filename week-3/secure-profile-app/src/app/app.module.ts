@@ -17,20 +17,30 @@
 //https://www.youtube.com/watch?time_continue=2&v=vvXSW_Cldvg&feature=emb_logo
 //https://www.youtube.com/watch?time_continue=4&v=KTVHu4hafUs&feature=emb_logo
 
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-//importing of components
+import { NgModule } from '@angular/core';
+//importing components
 import { AppComponent } from './app.component';
 import { MyImageComponent } from './my-image/my-image.component';
 import { MyDetailsComponent } from './my-details/my-details.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
+import { AppRoutes } from './app.routing';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  // added two declarations from myimage and my detail compponents
-  declarations: [AppComponent, MyImageComponent, MyDetailsComponent, SignInComponent, HomeComponent],
-  imports: [BrowserModule],
+  declarations: [
+    AppComponent,
+    MyImageComponent,
+    MyDetailsComponent,
+    SignInComponent,
+    HomeComponent,
+  ],
+  imports: [
+    BrowserModule,
+    //Imports from app.routing.ts
+    RouterModule.forRoot(AppRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
