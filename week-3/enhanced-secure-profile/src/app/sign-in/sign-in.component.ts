@@ -16,7 +16,8 @@
 //https://www.youtube.com/watch?v=T7ef0bOOWs4
 //https://www.youtube.com/watch?time_continue=2&v=vvXSW_Cldvg&feature=emb_logo
 //https://www.youtube.com/watch?time_continue=4&v=KTVHu4hafUs&feature=emb_logo
-//https://www.digitalocean.com/community/tutorials/angular-navigation-routerlink-navigate-navigatebyurl-->
+//https://www.digitalocean.com/community/tutorials/angular-navigation-routerlink-navigate-navigatebyurl
+//angular.io/guide/event-binding-->
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -34,6 +35,7 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  //This function is called is the sign-in.component.html
   signin() {
     this.isLoggedIn = true;
     //using router navigate function

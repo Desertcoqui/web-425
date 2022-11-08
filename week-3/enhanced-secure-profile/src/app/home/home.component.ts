@@ -28,13 +28,10 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   // isLoggedIn: Boolean = true;
 
-  // constructor(private route: ActivatedRoute) {
-  //   //isLoggedIn var passed from sign-in
-  //   this.isLoggedIn = Boolean(
-  //     this.route.snapshot.queryParamMap.get('isloggedIn')
-  //   );
-  // }
-  constructor() {}
+  constructor(private route: ActivatedRoute) {
+    //isLoggedIn var passed from sign-in
+    console.log(route);
+  }
 
   ngOnInit(): void {}
 }

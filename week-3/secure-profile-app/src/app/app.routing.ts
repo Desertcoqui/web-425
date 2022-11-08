@@ -27,7 +27,7 @@ export const AppRoutes: Routes = [
     component: SignInComponent,
   },
   {
-    path: 'home',
+    path: '/home',
     component: HomeComponent,
   },
 ];
