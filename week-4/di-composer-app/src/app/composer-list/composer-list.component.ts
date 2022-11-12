@@ -1,21 +1,20 @@
-// // Title: Assignment 3.2 Passing Data to routes, Part 1
-// // Author: Prof Krasso
-// // Date: Nov 6 2022
-// // Modified: Detres
-// // Description: Assignment 3.2 Passing Data to routes, Part 1
-// //Week-3 exercises/videos
-// //https://www.npmjs.com/package/bootstrap-icons
-// //https://angular.io/api/router/RouterLink
-// //https://angular.io/tutorial/toh-pt5
-// https://stackoverflow.com/questions/41370760/difference-between-routerlink-and-routerlink 
-// https://www.youtube.com/watch?v=2nuUKwyaCzU&t=2s
-// https://www.youtube.com/watch?time_continue=5&v=jBcIjOtctIY&feature=emb_logo
-// https://cyberactive.bellevue.edu/ultra/courses/_513884_1/cl/outline-->
+// Title: Assignment 4.2 Inversion of Control and Dependency Injection
+// Author: Prof Krasso
+// Date: Nov 12 2022
+// Modified: Detres
+//https://www.npmjs.com/package/bootstrap-icons
+//https://angular.io/api/router/RouterLink
+//https://angular.io/tutorial/toh-pt5
+//https://stackoverflow.com/questions/
+//https://stackoverflow.com/questions/56271351/how-to-get-id-from-the-url-using-snapshot-or-activatedroute-subscriber-in-angula
+//https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get
 
 //Imports
 import { IComposer } from '../composer.interface';
 import { Component, OnInit } from '@angular/core';
-import { Composer } from '../composer.class';
+import { ComposerService } from '../composer.service';
+//import removed due to file deletion
+// import { Composer } from '../composer.class';
 
 @Component({
   selector: 'app-composer-list',
@@ -25,9 +24,9 @@ import { Composer } from '../composer.class';
 export class ComposerListComponent implements OnInit {
   /* Defines Variables and initializes array */
   composers: Array<IComposer>;
-  constructor() {
-    this.composers = new Composer().getComposers();
-  }
 
+  constructor(private composerService: ComposerService) {
+    this.composers = this.composerService.getComposers();
+  }
   ngOnInit(): void {}
 }
