@@ -10,8 +10,8 @@
 //https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get
 
 //Imports
-import { IComposer } from '../composer.interface';
 import { Component, OnInit } from '@angular/core';
+import { IComposer } from '../composer.interface';
 import { ComposerService } from '../composer.service';
 //import removed due to file deletion
 // import { Composer } from '../composer.class';

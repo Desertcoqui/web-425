@@ -17,11 +17,9 @@ import { IComposer } from './composer.interface';
 @Injectable({
   providedIn: 'root',
 })
-export class ComposerService {
-  constructor() {}
-}
+
 // create and export Composer class
-export class Composer {
+export class ComposerService {
   composers: Array<IComposer>;
 
   constructor() {
