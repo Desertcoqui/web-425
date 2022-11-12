@@ -8,30 +8,44 @@
 //https://angular.io/api/router/RouterLink
 //https://angular.io/tutorial/toh-pt5
 //https://stackoverflow.com/questions/
-//41370760difference-between-routerlink-and-routerlink
+//41370760difference-between-routerlink-and-routerlink -->
 //https://stackoverflow.com/questions/56271351/how-to-get-id-from-the-url-using-snapshot-or-activatedroute-subscriber-in-angula
 //https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get
 
-//imports
+//Imported statements
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 import { ComposerListComponent } from './composer-list/composer-list.component';
-import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
-import { RouterModule } from '@angular/router';
+
+//Routes from Imports
+const routes: Routes = [
+  {
+    path: '',
+    component: ComposerListComponent,
+  },
+  {
+    path: 'composer-list',
+    component: ComposerListComponent,
+  },
+  {
+    path: 'composer-details/:composerId',
+    component: ComposerDetailsComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+];
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    ComposerListComponent,
-    ContactComponent,
-    AboutComponent,
-    ComposerDetailsComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
-  bootstrap: [AppComponent],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppModule {}
+export class AppRoutingModule {}
