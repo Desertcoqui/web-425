@@ -1,23 +1,20 @@
-//Title: Assignment 3.2 Passing Data to routes, Part 1
+// Title: Assignment 4.2 Inversion of Control and Dependency Injection
 // Author: Prof Krasso
-// Date: Nov 6 2022
+// Date: Nov 12 2022
 // Modified: Detres
-// Description: Assignment 3.2 Passing Data to routes, Part 1
-//Week-3 exercises/videos
 //https://www.npmjs.com/package/bootstrap-icons
 //https://angular.io/api/router/RouterLink
 //https://angular.io/tutorial/toh-pt5
 //https://stackoverflow.com/questions/
-//41370760difference-between-routerlink-and-routerlink -->
 //https://stackoverflow.com/questions/56271351/how-to-get-id-from-the-url-using-snapshot-or-activatedroute-subscriber-in-angula
 //https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get
 
 //imports added
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
+// import { Composer } from '../composer.class';
 import { ActivatedRoute } from '@angular/router';
-
+import { ComposerService } from '../composer.service';
 @Component({
   selector: 'app-composer-details',
   templateUrl: './composer-details.component.html',
@@ -28,15 +25,18 @@ export class ComposerDetailsComponent implements OnInit {
   composerId: number;
   composer!: IComposer;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(
+    private route: ActivatedRoute,
+    private composerService: ComposerService
+  ) {
     this.composerId = parseInt(
       this.route.snapshot.paramMap.get('composerId')!,
       10
     );
 
-    // Populates if their is a value in composer ID
+    // checks to see if composerId has a value
     if (this.composerId) {
-      this.composer = new Composer().getComposer(this.composerId);
+      this.composer = this.composerService.getComposer(this.composerId);
     }
   }
 
