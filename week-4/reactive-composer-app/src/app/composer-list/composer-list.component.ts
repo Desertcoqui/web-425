@@ -11,6 +11,7 @@
 //https://stackoverflow.com/questions/56271351/how-to-get-id-from-the-url-using-snapshot-or-activatedroute-subscriber-in-angula
 //https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get
 //https://bobbyhadz.com/blog/typescript-argument-type-null-not-assignable-parameter-type-string
+//https://www.youtube.com/watch?time_continue=2&v=4O7eAN3sZ24&feature=emb_logo
 
 //Imports
 import { Component, OnInit } from '@angular/core';
