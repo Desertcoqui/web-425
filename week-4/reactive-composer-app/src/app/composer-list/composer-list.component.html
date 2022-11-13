@@ -1,25 +1,27 @@
-<!-- // Title: Assignment 3.2 Passing Data to routes, Part 1
+<!--// Title: Assignment 4.3 Handling Form Events with Observables
 // Author: Prof Krasso
-// Date: Nov 6 2022
+// Date: Nov 13 2022
 // Modified: Detres
-// Description: Assignment 3.2 Passing Data to routes, Part 1
-//Week-3 exercises/videos
+//Week-4 exercises/videos
 //https://www.npmjs.com/package/bootstrap-icons
 //https://angular.io/api/router/RouterLink
 //https://angular.io/tutorial/toh-pt5
-https://stackoverflow.com/questions/41370760/difference-between-routerlink-and-routerlink
-https://www.youtube.com/watch?v=2nuUKwyaCzU&t=2s
-https://www.youtube.com/watch?time_continue=5&v=jBcIjOtctIY&feature=emb_logo
-https://cyberactive.bellevue.edu/ultra/courses/_513884_1/cl/outline-->
+//https://stackoverflow.com/questions/
+//41370760difference-between-routerlink-and-routerlink
+//https://stackoverflow.com/questions/56271351/how-to-get-id-from-the-url-using-snapshot-or-activatedroute-subscriber-in-angula
+//https://www.tabnine.com/code/javascript/functions/%40angular%2Frouter/ParamMap/get-->
 
 
-<div style="width:100%;height:0%;padding-bottom:50%;position:relative;"><iframe
-    src="https://giphy.com/embed/9A50I1gHt5YrSHoX0D" width="100%" height="100%" style="position:absolute"
-    frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
 
 <!-- Composer list which will be generated  -->
 <div class="row">
+
   <div class="col-sm-12">
+    <div class="textSearch">
+      <input type="text" id="txtSearch" class="form-control" placeholder="Search by Name"
+        [formControl]="txtSearchControl" />
+    </div>
     <table class="table table-bordered">
       <thead class="thead-dark">
         <tr>
