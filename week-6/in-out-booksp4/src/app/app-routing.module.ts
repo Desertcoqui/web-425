@@ -1,20 +1,16 @@
-// Title: Assignment 5.2 Navigation n layout
+// Title: Assignment 6.2 - Output Properties
 // Author: Prof Krasso
-// Date: Nov 18 2022
+// Date: Nov 26 2022
 // Modified: Detres
-//Week-5 exercises/videos
-//https://www.npmjs.com/package/bootstrap-icons
-//https://angular.io/api/router/RouterLink
-//https://angular.io/tutorial/toh-pt5
-// https://stackoverflow.com/questions/41370760/difference-between-routerlink-and-routerlink
-//https://youtu.be/d6gJLs3ZZII
-//https://stackoverflow.com/questions/74114391/npm-install-err-code-eresolve-while-resolving-angular-user-idle3-0-0
+//Week-6 exercises/videos
+// https://www.youtube.com/watch?v=SxAsehrObQo&feature=youtu.be
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 //component paths
 const routes: Routes = [
@@ -33,6 +29,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'wishlist',
+    component: WishlistComponent,
   },
 ];
 
